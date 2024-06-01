@@ -5,6 +5,7 @@ tags: [javascript]
 ---
 
 ## Window Size
+
 How can I get `windowWidth`, `windowHeight`, `pageWidth`, `pageHeight`, `screenWidth`, `screenHeight`, `pageX`, `pageY`, `screenX`, `screenY` which will work in all major browsers?
 
 ![getSize](about-js-get-size.jpg)
@@ -13,12 +14,12 @@ How can I get `windowWidth`, `windowHeight`, `pageWidth`, `pageHeight`, `screenW
 
 每个HTML元素都有下列属性：
 
-|  |  |  |
-|- - -|- - - |- - - |
-|offsetWidth | clientWidth | scrollWidth |
+|              |              |              |
+| ------------ | ------------ | ------------ |
+| offsetWidth  | clientWidth  | scrollWidth  |
 | offsetHeight | clientHeight | scrollHeight |
-| offsetLeft | clientLeft | scrollLeft |
-| offsetTop | clientTop | scrollTop |
+| offsetLeft   | clientLeft   | scrollLeft   |
+| offsetTop    | clientTop    | scrollTop    |
 
 1. *clientHeight* 和 *clientWidth* 用于描述元素**内尺寸**，是指【元素内容+内边距】大小，不包括边框（**IE下实际包括**）、外边距、滚动条部分
 
