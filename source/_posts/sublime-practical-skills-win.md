@@ -1,6 +1,7 @@
 ---
 title: Sublime实用技巧(Win)
 date: 2020-07-06 08:59:08
+description: Sublime 常用快捷键(Windows)
 tags: [sublime]
 ---
 
@@ -52,7 +53,7 @@ tags: [sublime]
 
 ## Editing
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + X` Delete line
 `Ctrl + ↩` Insert line after
@@ -86,7 +87,7 @@ _Keypress Command_
 
 ## Navigation/Goto Anywhere
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + P` Quick-open files by name
 `Ctrl + R` Goto symbol
@@ -95,7 +96,7 @@ _Keypress Command_
 
 ## General
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + ⇧ + P` Command prompt
 `Ctrl + KB` Toggle side bar
@@ -103,7 +104,7 @@ _Keypress Command_
 
 ## Find/Replace
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + F` Find
 `Ctrl + H` Replace
@@ -111,7 +112,7 @@ _Keypress Command_
 
 ## Tabs
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + ⇧ + t` Open last closed tab
 `Ctrl + PgUp` Cycle up through tabs
@@ -121,7 +122,7 @@ _Keypress Command_
 
 ## Split window
 
-_Keypress Command_
+_Keypress Command:_
 
 `Alt + ⇧ + 2` Split view into two columns
 `Alt + ⇧ + 1` Revert view to single column
@@ -131,7 +132,7 @@ _Keypress Command_
 
 ## Bookmarks
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + F2` Toggle bookmark
 `F2` Next bookmark
@@ -140,7 +141,7 @@ _Keypress Command_
 
 ## Text manipulation
 
-_Keypress Command_
+_Keypress Command:_
 
 `Ctrl + KU` Transform to Uppercase
 `Ctrl + KL` Transform to Lowercase
