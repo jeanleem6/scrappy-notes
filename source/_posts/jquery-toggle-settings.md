@@ -1,6 +1,7 @@
 ---
 title: jquery toggle()及相关动画设置
 date: 2017-06-14 08:37:58
+description: 💬聊一聊 jquery 的 <code>toggle()</code> 方法及动画设置💬
 tags: [jQuery]
 ---
 
@@ -21,13 +22,12 @@ $(".btn1").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed:** 可选。规定元素从可见到隐藏的速度（或者相反）。默认为 "0"。
     在设置速度的情况下，元素从可见到隐藏的过程中，会逐渐地改变其高度、宽度、外边距、内边距和透明度。*如果设置此参数，则无法使用 switch 参数。*
     **可能的值：**毫秒 （比如 1500）、slow、normal、fast
 - **callback**: 可选。toggle 函数执行完之后，要执行的函数。*除非设置了 speed 参数，否则不能设置该参数。*
 - **switch**: 可选。布尔值。规定 toggle 是否*隐藏(false)*或*显示(true)*所有被选元素。*如果设置此参数，则无法使用 speed 和 callback 参数。*
-
-<!-- more -->
 
 ## slideToggle()
 
@@ -44,9 +44,9 @@ $(".btn1").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed:** 可选。规定元素从可见到隐藏的速度（或者相反）。默认为 "normal"。在设置速度的情况下，元素在切换的过程中，会逐渐地改变其高度（这样会创造滑动效果）。 **可能的值：**毫秒 （比如 1500）、slow、normal、fast
 - **callback**: 可选。toggle 函数执行完之后，要执行的函数。*除非设置了 speed 参数，否则不能设置该参数。*
-
 
 ## Fading——淡入淡出
 
@@ -77,9 +77,9 @@ $("button").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed**：可选，参数规定效果的时长。它可以取以下值：slow、fast 或毫秒。
 - **callback**：可选，参数是 fading 完成后所执行的函数名称。
-
 
 ### fadeOut()
 
@@ -97,9 +97,9 @@ $("button").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed**：可选，参数规定效果的时长。它可以取以下值：slow、fast 或毫秒。
 - **callback**：可选，参数是 fading 完成后所执行的函数名称。
-
 
 ### fadeToggle()
 
@@ -119,9 +119,9 @@ $("button").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed**：可选，参数规定效果的时长。它可以取以下值：slow、fast 或毫秒。
 - **callback**：可选，参数是 fading 完成后所执行的函数名称。
-
 
 ### fadeTo()
 
@@ -139,10 +139,10 @@ $("button").click(function(){
 ```
 
 *[参数]说明：*
+
 - **speed**：必须，参数规定效果的时长。它可以取以下值：slow、fast 或毫秒。
 - **opacity**：必须，参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。
 - **callback**：可选，参数是 fading 完成后所执行的函数名称。
-
 
 ## 引深
 
@@ -155,6 +155,7 @@ $("button").click(function(){
 ### 1、show()显示效果
 
 语法：show(speed,callback)　　Number/String,Function　speend为动画执行时间，单位为毫秒。也可以为slow","normal","fast"　callback可选,为当动画完成时执行的函数。
+
 ``` javascript
 show(speed,[easing],callback)　　Number/String　　easing默认是swing,可选linear;
 
@@ -164,6 +165,7 @@ $("#div1").show(3000,function(){ alert("动画显示完成!"); });
 ### 2、hide()隐藏效果
 
 语法:hide(speed,callback)　　Number/String,Function
+
 ``` javascript
 hide(speed,easing,callback)　　Number/String
 
@@ -173,6 +175,7 @@ $("#div1").hide(3000,function(){ alert("动画隐藏完成") });
 ### 3、toggle()隐藏显示自动切换，当目前为显示则隐藏，当目前为隐藏则显示
 
 语法：toggle(speed,callback)　　Number/String,Function
+
 ``` javascript
 toggle(speed,callback)　　Number/String,String,Function
 
@@ -182,6 +185,7 @@ $("#div1").toggle(3000,function(){ alert("动画效果切换完成") });
 ### 4、slideDown()向下显示，slow()是水平与垂直方向同时展开，而slideDown是仅仅在垂直方向向下展开
 
 语法:slideDown(speed,callback)　　Number/String,Function
+
 ``` javascript
 slideDown(speed,[easing],callback)　　Number/String,Function
 
@@ -191,6 +195,7 @@ $("#div1").slideDown(3000,function(){ alert("向下展开显示成功!"); });
 ### 5、slideUp()向上隐藏,　　hide()是水平与垂直两个方向的，而slideUp()仅仅是垂直方向向上收起隐藏
 
 语法:slideUp(speed,callback)　　Number/String,Function
+
 ``` javascript
 slideUp(speed,[easing],callback)　　Number/String,String,Function
 
@@ -200,6 +205,7 @@ $("#div1").slideUp(3000,function(){ alert("向上收起隐藏成功!"); })
 ### 6、slideToggle垂直方向上切换,toggle是水平与垂直两个方向上的，而slideToggle是仅仅垂直方向的。
 
 语法:slideToggle(speed,callback)　　Number/String,Function
+
 ``` javascript
 slideToggle(speed,[easing],callback)　　Number/String,String,Function
 
@@ -209,6 +215,7 @@ $("#div1").slideToggle(3000,function(){ alert("水平方向上切换成功"); })
 ### 7、fadeIn() 以改变透明度来显示
 
 语法：fadeIn(speed,callback)　　　　Number/String,Function
+
 ``` javascript
 fadeIn(speed,[easing],callback)　　Number/String,Function
 
@@ -218,6 +225,7 @@ $("#div1").FadeIn(3000,function(){ alert("淡入显示成功!"); });
 ### 8、fadeOut() 以改变透明度来隐藏
 
 语法：fadeOut(speed,callback)　　 Number/String,Function
+
 ``` javascript
 fadeOut(speed,[easing],callcack)　　   Number/String,String,Function
 
@@ -227,6 +235,7 @@ $("#div1").fadeOut(3000,function(){ alert("淡出隐藏成功!"); });
 ### 9、fadeToggle() 以改变透明度来切换显示隐藏状态
 
 语法: fadeToggle(speed,callback)　　Number/String,Function
+
 ``` javascript
 fadeToggle(speed,[easing],callback)　　　　Number/String,Function
 
@@ -236,6 +245,7 @@ $("#div1").fadeToggle(3000,function(){ alert("淡入淡出切换成功!"); });
 ### 10、fadeTo() 由指定的时间将透明度改变到指定的透明度
 
 语法：fadeTo(speed,callback)　　　　Number/String,Function
+
 ``` javascript
 fadeTo([speed],opacity,[easing],[fn])　　Number/String,Float,String,Function
 
@@ -245,6 +255,7 @@ $("#div1").fadeTo(3000,0.22,function(){ alert("透明度改变成功!"); });
 ### 11、animate() 自定义动画，一般来说数字变动都可以用于动画。
 
 语法：animate(params,speed,easing,callback);　　样式参数，时间，可选择，函数
+
 ``` javascript
 $("#div1").animate({ width:300px,height,300px },3000);
 
@@ -338,4 +349,5 @@ $(function(){
 
 });
 ```
+
 <!-- source: http://www.haorooms.com/post/jquery_toggle_dr -->

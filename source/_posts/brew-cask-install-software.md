@@ -1,6 +1,7 @@
 ---
 title: brew_cask_install_software
 date: 2018-01-14 09:56:44
+description: 用 brew 安装和管理 Mac 的软件✨
 tags: [Mac,tools]
 ---
 

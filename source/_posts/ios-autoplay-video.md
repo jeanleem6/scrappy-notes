@@ -1,6 +1,7 @@
 ---
 title: iOS 微信 音频 视频自动播放
 date: 2017-11-15 15:27:04
+description: iPhone 中的音频、视频无法自动播放？⏯️本文旨在解决 iPhone 微信中音频/视频自动播放的问题▶️
 tags: [ios,autoplay]
 ---
 

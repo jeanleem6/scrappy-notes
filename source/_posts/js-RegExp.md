@@ -1,6 +1,7 @@
 ---
 title: js-RegExp
 date: 2017-10-05 13:56:18
+description: 💬聊一聊 javascript 中的<b>正则</b> ...💬
 tags: [javascript,RegExp]
 ---
 
@@ -14,9 +15,9 @@ var expression = /pattern/flags;
 
 - `pattern`: 可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、向前查找以及反向应用；
 - `flags`:
-    - `g` 全局模式(global)，即应用于所有字符串，而非发现第一个匹配项时立即停止；
-    - `i` 不区分大小写(case-insensitive)模式；
-    - `m` 多行(multiline)模式，即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。
+  - `g` 全局模式(global)，即应用于所有字符串，而非发现第一个匹配项时立即停止；
+  - `i` 不区分大小写(case-insensitive)模式；
+  - `m` 多行(multiline)模式，即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。
 
 模式(pattern)中使用的**元字符**都必须转义。正则中的元字符包括：
 
@@ -120,4 +121,3 @@ if (pattern.test(text)){
     alert(RegExp.$2); // t
 }
 ```
-

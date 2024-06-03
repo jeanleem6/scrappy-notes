@@ -1,7 +1,7 @@
 ---
 title: 同一台电脑同时使用 gitHub 和 gitLab
 date: 2024-06-03 10:07:19
-description: 工作中我们有时可能会在同一台电脑上使用多个 git 账号，例如：公司的 gitLab 账号；个人的 gitHub 账号。<br /><br />怎样才能在使用 gitLab 与 gitHub 时，切换成对应的账号，并且免密？<br /><br />这时我们需要使用 ssh（git可以选择使用 https 方式、ssh 方式两种方式通信，但使用 https 方式时，每次 `fetch` 和 `push` 代码都需要输入账号和密码），本文将以windows为例。
+description: 工作中我们有时可能会在同一台电脑上使用多个 git 账号，例如：公司的 gitLab 账号；个人的 gitHub 账号。<br /><br />🚀怎样才能在使用 gitLab 与 gitHub 时，切换成对应的账号，并且免密？<br /><br />🚦这时我们需要使用 ssh🚝（git可以选择使用 https 方式、ssh 方式两种方式通信，但使用 https 方式时，每次 <code>fetch</code> 和 <code>push</code> 代码都需要输入账号和密码），本文将以windows为例。
 tags: [git]
 ---
 

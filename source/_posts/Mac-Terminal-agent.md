@@ -1,7 +1,7 @@
 ---
 title: MAC下终端走代理的几种方法
 date: 2018-07-02 09:23:33
-description: Mac 终端代理设置
+description: Mac 终端代理设置 ✔️
 tags: [Mac, agent]
 ---
 

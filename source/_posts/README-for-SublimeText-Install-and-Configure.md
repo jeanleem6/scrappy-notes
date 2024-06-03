@@ -1,7 +1,7 @@
 ---
 title: 安装、配置 SublimeText 及其插件
 date: 2024-06-03 10:19:14
-description: Sublime Text 的安装、配置及插件安装说明文档。重点讲述 SublimeLinter 的安装及配置；如何在不同计算机之间正确同步配置信息及已安装的插件。
+description: Sublime Text 的安装、配置及插件安装说明文档。🚢重点讲述 SublimeLinter 的安装及配置；如何在不同计算机之间正确同步配置信息及已安装的插件。
 tags: [sublime]
 ---
 

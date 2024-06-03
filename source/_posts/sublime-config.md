@@ -1,6 +1,7 @@
 ---
 title: sublime-config
 date: 2017-05-05 13:04:04
+description: 💬本文是安装和配置 Sublime Text 的流程，请按照顺序一步一步来💬
 tags: [sublime]
 ---
 

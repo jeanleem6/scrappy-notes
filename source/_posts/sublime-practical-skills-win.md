@@ -1,7 +1,7 @@
 ---
 title: Sublime实用技巧(Win)
 date: 2020-07-06 08:59:08
-description: Sublime 常用快捷键(Windows)
+description: Sublime 常用快捷键(Windows)🚀
 tags: [sublime]
 ---
 

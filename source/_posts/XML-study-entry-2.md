@@ -1,18 +1,22 @@
 ---
 title: XML Entry-2
 date: 2017-08-29 10:25:54
+description: XML 用作数据存储媒介。本文讲解通过 Javascript 的 <code>XMLHttpRequest</code> 方法与服务器交换 xml 数据，解析 xml 文档；将 xml 文档转换为 DOM 🫱🫲👌
 tags: [xml]
 ---
 
 ## XMLHttpRequest 对象
+
 XMLHttpRequest 对象用于在后台与服务器交换数据。
 它是开发者的梦想，因为它可以做以下事情：
+
 - 在不重新加载页面的情况下更新网页
 - 在页面已加载后从服务器请求数据
 - 在页面已加载后从服务器接收数据
 - 在后台向服务器发送数据
 
-**创建 XMLHttpRequest 对象**
+## 创建 XMLHttpRequest 对象
+
 ``` Javascript
 xmlhttp = new XMLHttpRequest();
 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //老版本IE（IE5 和 IE6）使用 ActiveX 对象
@@ -53,9 +57,10 @@ function state_Change() {
     }
 }
 ```
+
 > 注释：`onreadystatechange` 是一个事件句柄。它的值 (state_Change) 是一个函数的名称，当 `XMLHttpRequest` 对象的状态发生改变时，会触发此函数。状态从 0 (uninitialized) 到 4 (complete) 进行变化。仅在状态为 4 时，我们才执行代码。
 
-## 解析xml 文档
+## 解析 xml 文档
 
 ``` Javascript
 var xmlhttp = null;
@@ -104,6 +109,7 @@ if (window.DOMParser) {
     xmlDoc.loadXML(txt);
 }
   ```
+
 > 注：IE 使用 `loadXML()` 方法来解析 XML 字符串，而其他浏览器使用 `DOMParser` 对象。
 > 注：`loadXML()` 方法用于加载字符串（文本），`load()` 用于加载文件。
 

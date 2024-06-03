@@ -1,6 +1,7 @@
 ---
 title: javascript 用户代理(userAgent)
 date: 2017-07-13 17:45:09
+description: 💬聊一聊 javascript 中的 <code>userAgent</code> ...💬
 tags: [javascript]
 ---
 

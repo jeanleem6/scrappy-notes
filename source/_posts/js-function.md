@@ -1,6 +1,7 @@
 ---
 title: js-function
 date: 2017-10-06 08:42:46
+description: 💬聊一聊 javascript 中的 <code>function</code> ...💬
 tags: [javascript]
 ---
 
