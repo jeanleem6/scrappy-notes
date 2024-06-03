@@ -5,13 +5,19 @@ Scrappy notes
 ## 安装 Hexo
 
 ```shell
+npm install hexo-cli -g
+```
+
+> 官网： https://hexo.io/zh-cn/
+
+## 安装 scrappy-notes
+
+```shell
 cd E:/gitRepo # 进入 Blog 存放目录
 git clone git@github.com:jeanleem6/scrappy-notes.git # clone 本 blog
 cd scrappy-notes # 进入 blog 目录
 yarn # 安装 packages
 ```
-
-> 官网： https://hexo.io/zh-cn/
 
 ## 安装 hexo-theme-even
 
