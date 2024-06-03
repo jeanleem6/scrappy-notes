@@ -1,10 +1,11 @@
 ---
 title: Change Lanunchpad Icon Size
 date: 2019-05-10 14:35:18
+description: How to Adjust the Icon Grid Count of Launchpad in Mac OS X？
 tags: [Mac]
 ---
 
-**How to Adjust the Icon Grid Count of Launchpad in Mac OS X**
+## How to Adjust the Icon Grid Count of Launchpad in Mac OS X
 
 replacing the `X` numbers for the appropriate columns and grid icon counts
 
@@ -24,29 +25,27 @@ If you want to return to the default setting, just change the column and row cou
 defaults write com.apple.dock springboard-columns -int 7;defaults write com.apple.dock springboard-rows -int 5;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 
----
-
 **The commands** for customizing the Launchpad layout **can also be split apart** if desired like so:
 
-**Set the Launchpad Column Icon Count**
+## Set the Launchpad Column Icon Count
 
 ``` bash
 defaults write com.apple.dock springboard-columns -int 7
 ```
 
-**Set the Launchpad Row App Icon Count**
+## Set the Launchpad Row App Icon Count
 
 ``` bash
 defaults write com.apple.dock springboard-rows -int 8
 ```
 
-**Reset Launchpad**
+## Reset Launchpad
 
 ``` bash
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;
 ```
 
-**Relaunch the Dock with killall**
+## Relaunch the Dock with killall
 
 ``` bash
 killall Dock

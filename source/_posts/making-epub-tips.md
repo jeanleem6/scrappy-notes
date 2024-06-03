@@ -1,11 +1,11 @@
 ---
 title: epub电子书制作杂录
 date: 2018-11-05 17:30:46
+description: 简要介绍如何制作 epub 文档
 tags: [epub]
 ---
 
 > 工具准备：[Calibre](https://calibre-ebook.com/)，Calibre 中文轉換插件 [TradSimpChinese](https://github.com/Hopkins1/TradSimpChinese)
-
 
 ## *编辑书籍/Edit Book* 简介
 
@@ -18,7 +18,8 @@ tags: [epub]
 
 第一步，修改 content.opf 文件，新增一行：`<meta property="ibooks:specified-fonts">true</meta>`
 
-第二步，创建xml文件: com.apple.ibooks.display-options.xml，内容如下：
+第二步，创建xml文件: `com.apple.ibooks.display-options.xml`，内容如下：
+
 ```xml
 <display_options>
     <platform name="*"> <!-- allowed values for platform "iphone", "ipad", or "*" for all -->
@@ -28,10 +29,11 @@ tags: [epub]
 ```
 
 第三步，点击 calibre 中的 *编辑书籍/Edit Book* 打开 *Edit Book* 工具，点击 *新增文件/New File*：
-- 在弹窗中输入 meta-inf/com.apple.ibooks.display-options.xml
+
+- 在弹窗中输入 `meta-inf/com.apple.ibooks.display-options.xml`
 - 点击 *导入文件(图片/字体等)/Import resource file*，定位到第二步创建的xml文件选择打开，点 *确定* 后xml文件就添加好了。
 
-第四步，点击 *工具栏* 中的 *管理字体(TTF)* > *安装字体*，添加字体后可通过重命名更改字体路径：Fonts/FontName.ttf
+第四步，点击 *工具栏* 中的 *管理字体(TTF)* > *安装字体*，添加字体后可通过重命名更改字体路径：`Fonts/FontName.ttf`
 
 第五步，在样式表中添加内置字体：
 
@@ -46,15 +48,15 @@ tags: [epub]
 
 第一步，修改 content.opf 文件，新增一行：`<meta content="vertical-rl" name="primary-writing-mode"/>`
 
-第二步，修改 content.opf 文件， 给 spine 标签增加一属性：page-progression-direction="rtl"
+第二步，修改 content.opf 文件， 给 spine 标签增加一属性：`page-progression-direction="rtl"`
 
-第三步，修改样式表，为 body 增加一属性： writing-mode: vertical-rl;
+第三步，修改样式表，为 body 增加一属性： `writing-mode: vertical-rl`;
 
 > 有时需要**局部横排**显示，例如图片的说明文字可以横排显示在图片下方，可为说明文字单独设置css：writing-mode: horizontal-tb
 
 ## 添加弹注效果
 
-<img src="flowing_footnote.png" width="200px">
+![footnote](flowing_footnote.png)
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
@@ -66,13 +68,13 @@ tags: [epub]
 ```
 
 > 注意，必须有这几个属性：
+>
 > - html 标签: `xmlns:epub="http://www.idpf.org/2007/ops"`
 > - a (注释序号)：`epub:type="noteref"`
 > - aside (注释)：`epub:type="footnote"`
 >
-> aside 标签会自动隐藏，如果希望注释正常显示出来，可用 div/p 等标签替代。
+> aside 标签会自动隐藏，如果希望注释正常显示出来，可用 `div` / `p` 等标签替代。
 > ios 中为整屏弹注，多看等其它阅读器不支持这种方式。
-
 
 ## 繁体标点替换
 
@@ -113,10 +115,9 @@ body {
 }
 ```
 
-
 ## epub目录树结构
 
-```
+```text
 ├── META-INF
 │   ├── com.apple.ibooks.display-options.xml
 │   └── container.xml
@@ -147,6 +148,6 @@ body {
 
 ---
 reference:
-http://guidohenkel.com/2015/04/custom-fonts-in-ibooks/ (Custom Fonts)
-https://help.apple.com/itc/booksassetguide/en.lproj/static.html （Section:`Pop-up Footnotes`）
-https://bookfere.com/post/204.html
+[Custom Fonts](http://guidohenkel.com/2015/04/custom-fonts-in-ibooks/)
+[Pop-up Footnotes](https://help.apple.com/itc/booksassetguide/en.lproj/static.html)（Section: **Pop-up Footnotes**）
+[如何把 Kindle 电子书的横排文字改成竖排](https://bookfere.com/post/204.html)

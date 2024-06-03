@@ -1,6 +1,7 @@
 ---
 title: Multiple MySQL Versions with Homebrew
 date: 2019-05-08 11:20:10
+description: 用 Homebrew 管理多版本的 MySQL
 tags: [mysql]
 ---
 
