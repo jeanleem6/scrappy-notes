@@ -3,38 +3,36 @@ title: about
 layout: about   # 添加使用 about 模版
 ---
 
-Whatever you want to do
-Wherever you want to go
-It's truly up to you
+___________________________
+`DOC Store` `Scrappy Notes`
+___________________________
 
----
-
-- email: [jhlee007@gmail.com] [mail]
-- Github: [@jeanleem6] [github]
-
-[mail]: mailto:jhlee007@gmail.com
-[github]: https://github.com/jeanleem6
-
----
 
 <!-- resources: -->
+## Tools
 
-| resources             | resources                | resources                                 |
-| --------------------- | ------------------------ | ----------------------------------------- |
-| [ECMAScript 6][rs1]   | [freecodecamps][rs2]     | [codepen][rs3]                            |
-| [requirejs][rs4]      | [vuejs][rs5]             | [understanding ES6][rs6]                  |
-| [js标准参考教程][rs7] | [ECMAScript 6入门][rs8]  | [How to Ask Questions The Smart Way][rs9] |
-| [webpack][rs10]       | [Mozilla JS Guide][rs11] | [Color Names][rs12]                       |
+- [TinyPNG](https://tinypng.com/) -- 图片压缩
+- [LOL Colors](https://www.webdesignrankings.com/resources/lolcolors/) -- 调色板灵感
+- [Color Picker](https://htmlcolorcodes.com/color-picker/) -- 拾色器
+- [Fonts.css](https://zenozeng.github.io/fonts.css/)  -- 跨平台中文字体解决方案
+- [FLATICON](https://www.flaticon.com/) -- ICONS
+- [Smash](https://fromsmash.com/) -- Send & share (super) big files for everyone
+- [pixabay](https://pixabay.com/) -- 图片站
+- [Unsplash Developers](https://unsplash.com/documentation) -- 图片API
+- [DolphinCloud](https://hitun.io/) -- 海豚湾
+- [How to Ask Questions The Smart Way](http://doc.zengrong.net/smart-questions/en.html)
 
-[rs1]: https://wohugb.gitbooks.io/ecmascript-6/content/docs/intro.html
-[rs2]: https://www.freecodecamp.com/
-[rs3]: https://codepen.io/
-[rs4]: http://requirejs.cn/
-[rs5]: https://cn.vuejs.org/
-[rs6]: https://github.com/nzakas/understandinges6
-[rs7]: http://javascript.ruanyifeng.com/
-[rs8]: http://es6.ruanyifeng.com/
-[rs9]: http://doc.zengrong.net/smart-questions/en.html
-[rs10]: http://webpackdoc.com/
-[rs11]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
-[rs12]: http://www.color-hex.com/color-names.html
+## Software Download
+
+- [AppNee Freeware Group.](https://appnee.com/) -- (Mac & Win)
+- [macx](https://macx.ws/) -- (Mac Only)
+- [GET INTO PC](https://getintopc.com/) -- (Win Only)
+- [大眼仔](http://www.dayanzai.me/?s=sublime) -- (Win Only)
+
+## Enticing Sites
+
+- [Bartosz Ciechanowski](https://ciechanow.ski/)
+  各种☢️硬核原理☣️讲解(🎸SUPER COOL ANIMATIONS🚀⚡⌛🛸)
+  涵盖各种主题：⌚机械手表、🚲自行车、🪽飞机翼型、📷相机镜头、⚙️齿轮，等...
+- [Hacker News](https://news.ycombinator.com/news)
+- [Front End Interview Handbook](https://www.frontendinterviewhandbook.com/zh/javascript-questions)
