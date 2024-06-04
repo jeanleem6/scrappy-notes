@@ -101,14 +101,14 @@ RegExp 实例继承的 `toLocaleString()` 和 `toString()` 方法都返回正则
 
 ## RegExp 构造函数属性
 
-| 长属性名 | 短属性名 | 说明 |
-|- - - | - - - | - - -|
-| input | $_ | 最近一次要匹配的字符串。Opera未实现此属性 |
-| lastMatch | $& | 最近一次的匹配项。Opera未实现此属性 |
-| lastParen | $+ | 最后一次匹配的捕获组。Opera未实现此属性 |
-| leftContext | $\` | input 字符串中 lastMatch 之前的文本 |
-| multiline | $* | 布尔值，表示是否所有表达式都使用多行模式。IE和Opera未实现此属性 |
-| rightContext | $' | input 字符串中 lastMatch 之后的文本 |
+| 长属性名       | 短属性名 | 说明                                                            |
+| -------------- | -------- | --------------------------------------------------------------- |
+| `input`        | `$_`     | 最近一次要匹配的字符串。Opera未实现此属性                       |
+| `lastMatch`    | `$&`     | 最近一次的匹配项。Opera未实现此属性                             |
+| `lastParen`    | `$+`     | 最后一次匹配的捕获组。Opera未实现此属性                         |
+| `leftContext`  | `` $` `` | input 字符串中 lastMatch 之前的文本                             |
+| `multiline`    | `$*`     | 布尔值，表示是否所有表达式都使用多行模式。IE和Opera未实现此属性 |
+| `rightContext` | `$'`     | input 字符串中 lastMatch 之后的文本                             |
 
 除了上面这几个属性外，还有9个用于存储捕获组的构造函数属性。访问这些属性的语法是：`RegExp.$1`、`RegExp.$2`...`RegExp.$3`，分别用于存储第一、第二...第九个匹配的捕获组。在调用 `exec()` 或 `test()` 方法时，这些属性会被自动填充。
 
