@@ -143,7 +143,7 @@ Welcome to GitLab, @用户名!
 克隆自己 gitHub 的项目代码至本地仓库。在2.2中的本地仓库打开 Git Bash，输入命令：
 
 ```bash
-git clone git@github.com:jeanleem6/scrappy-notes.git # github项目地址(clone with ssh)
+git clone git@github.com:cedriclee85/scrappy-notes.git # github项目地址(clone with ssh)
 ```
 
 这样就可以对克隆的项目进行git其他的操作了。

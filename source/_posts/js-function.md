@@ -134,8 +134,8 @@ function getGreeting(name) {
     return "Hello, " + name;
 }
 
-var result2 = callSomeFunction(getGreeting, 'Jeanleem6');
-console.log(result2); // "Hello, Jeanleem6"
+var result2 = callSomeFunction(getGreeting, 'Cedric');
+console.log(result2); // "Hello, Cedric"
 ```
 
 > 注意：`callSomeFunction(someFunction, someArgument)`这里的第一个参数是要访问函数的指针而不执行函数，所以要去掉后面的那对圆括号。所以，这里传递的是 add10 和 getGreeting，而不是执行它们之后的结果。
@@ -158,10 +158,10 @@ function createComparisonFunction(propertyName) {
     };
 }
 
-var data = [{name:'Zachary',age:27},{name:'Jeanleem6',age:32}];
+var data = [{name:'Zachary',age:27},{name:'Cedric',age:32}];
 
 data.sort(createComparisonFunction('name'));
-console.log(data[0].name); // "Jeanleem6"
+console.log(data[0].name); // "Cedric"
 
 data.sort(createComparisonFunction('age'));
 console.log(data[0].name); // "Zachary"

@@ -14,7 +14,7 @@ npm install hexo-cli -g
 
 ```shell
 cd E:/gitRepo # 进入 Blog 存放目录
-git clone git@github.com:jeanleem6/scrappy-notes.git # clone 本 blog
+git clone git@github.com:cedriclee85/scrappy-notes.git # clone 本 blog
 cd scrappy-notes # 进入 blog 目录
 yarn # 安装 packages
 ```

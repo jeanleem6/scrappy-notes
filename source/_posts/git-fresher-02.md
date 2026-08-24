@@ -12,7 +12,7 @@ tags: [git]
 clone项目时自定义本地仓库的名字**mydemo**；如果不自定义，可去掉
 
 ``` bash
-    git clone https://github.com/jeanleem6/demo mydemo  # mydemo为可选项
+    git clone https://github.com/cedriclee85/demo mydemo  # mydemo为可选项
 ```
 
 ## 初始化仓库

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Banksy7
-subtitle: Banksy7 HEXO
+title: Cedric
+subtitle: Cedric HEXO
 description: This is a bloger about FE(front engineer), so here has any articles for CSS/HTML/JS, etc.
-author: Banksy7
+author: Cedric
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://jeanleem6.github.io
+url: https://cedriclee85.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,6 +101,6 @@ theme: even
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:jeanleem6/jeanleem6.github.io.git
+  repo: git@github.com:cedriclee85/cedriclee85.github.io.git
   branch: master
   message:
