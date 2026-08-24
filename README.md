@@ -1,134 +1,78 @@
 # scrappy-notes
 
-Scrappy notes
+Cedric 的 Hexo 博客源码，使用 [hexo-theme-even](https://github.com/ahonn/hexo-theme-even) 主题，部署到 [cedriclee85.github.io](https://cedriclee85.github.io)。
 
-## 安装 Hexo
+## 环境要求
 
-```shell
-npm install hexo-cli -g
-```
+- Node.js 14+（Hexo 7 要求）
+- Git
+- yarn
 
-> 官网： https://hexo.io/zh-cn/
-
-## 安装 scrappy-notes
+## 本地安装
 
 ```shell
-cd E:/gitRepo # 进入 Blog 存放目录
+npm install hexo-cli -g # 安装 Hexo CLI，官网：https://hexo.io/zh-cn/
 git clone git@github.com:cedriclee85/scrappy-notes.git # clone 本 blog
 cd scrappy-notes # 进入 blog 目录
-yarn # 安装 packages
+yarn # 安装依赖
 ```
 
-## 安装 hexo-theme-even
+## 安装主题 even
+
+主题本体不入库，需要单独 clone；本站的主题定制文件（`_config.yml`、favicon）备份在 `themes/_bak_for_theme_even/`，clone 后覆盖过去即可：
 
 ```shell
-# 检查 package.json 中是否有 hexo-renderer-ejs，如果没有在这里一并安装
-yarn add hexo-renderer-dartsass hexo-renderer-ejs
 git clone https://github.com/ahonn/hexo-theme-even themes/even
-cp themes/even/_config.yml.example themes/even/_config.yml
 ```
 
-将 `themes/_bak_for_theme_even` 文件夹下的文件拷贝到 `themes/even/` 目录中**替换**
+然后将 `themes/_bak_for_theme_even/` 下的文件拷贝到 `themes/even/` 对应位置**替换**。
 
-> hexo-theme-even Git Repository：https://github.com/ahonn/hexo-theme-even
+> 主题所需的渲染器 `hexo-renderer-dartsass`、`hexo-renderer-ejs` 已在 `package.json` 中声明，`yarn` 安装时会一并装好。
 
-## 运行 Hexo - server
+## 常用命令
+
+| 操作 | 命令 | 缩写 | yarn 脚本 |
+| --- | --- | --- | --- |
+| 本地预览（<http://localhost:4000>） | `hexo server` | `hexo s` | `yarn server` |
+| 新建文章 | `hexo new [layout] <title>` | `hexo n` | — |
+| 生成静态文件（输出到 `public/`） | `hexo generate` | `hexo g` | `yarn build` |
+| 部署网站 | `hexo deploy` | `hexo d` | `yarn deploy` |
+| 清除缓存与已生成文件 | `hexo clean` | — | `yarn clean` |
+| 列出网站数据 | `hexo list <type>` | `hexo l` | — |
+| 查看/修改配置 | `hexo config [key] [value]` | — | — |
+
+> 完整指令文档：<https://hexo.io/zh-cn/docs/commands>
+
+## 写作
 
 ```shell
-hexo s
-# or
-hexo server
+hexo new <title> # 使用 _config.yml 中 default_layout 指定的布局（post）
+hexo new [layout] <title> # layout 对应 scaffolds/ 下的文件名；标题含空格时用引号括起来
 ```
 
-## 新建文章 - new
+已开启 `post_asset_folder`，新建文章会自动生成同名文件夹，用于存放该文章的图片等资源。
 
-新建一篇文章。如果没有设置 layout 的话，默认使用 `_config.yml` 中的 `default_layout` 参数代替。如果标题包含空格的话，请使用引号括起来。
-
-```shell
-hexo n <title>
-# or
-hexo new <title>
-#or
-hexo n [layout] <title> # [layout] 调用的是 scaffolds/ 中的文件，写文件名即可
-#or
-hexo new [layout] <title>
-```
-
-## 生成静态文件 - generate
-
-静态文件默认保存位置为 `public` 文件夹
-
-```shell
-hexo g
-# or
-hexo generate
-```
-
-## 部署网站 - deploy
-
-```shell
-hexo d
-# or
-hexo deploy
-```
-
-以这种命令行方式创建 `markdown` 文件，会自动生成一个文件夹(*文件夹名称为该文件名*)，用于存放其图片等资源文件。
-
-## 添加图片
+### 添加图片
 
 ```markdown
 <!-- alt 和 title 可以不填 -->
 ![image alt](image-name.png 'image title')
 
-<!-- 添加链接的图片，将图像的Markdown 括在方括号中 -->
+<!-- 带链接的图片：将图片的 Markdown 括在方括号中 -->
 [![image alt](image-name.png "image title")](https://markdown.com.cn)
 ```
 
 > **注意：**
 >
 > 1. 图片需要存放到以该 markdown 文件名命名的文件夹中
-> 2. 这里的图片不需要添加路径，插件 `hexo-asset-image` 会自动为所有图片添加路径
+> 2. 图片不需要写路径，插件 `hexo-asset-image` 会自动为所有图片补全路径
 
-## 清除缓存文件 - clean
+## 部署
 
-```shell
-hexo c
-# or
-hexo clean
-```
+`hexo d` 通过 `hexo-deployer-git` 将 `public/` 推送到 `cedriclee85/cedriclee85.github.io` 的 `master` 分支（见 `_config.yml` 的 `deploy` 配置）。
 
-## 列出网站数据 - list
+发布前建议完整跑一遍：
 
 ```shell
-hexo l <type> # Available types: page, post, route, tag, category
-# or
-hexo list <type>
+hexo clean && hexo g -d # 清缓存 → 生成 → 部署
 ```
-
-## 显示 Hexo 版本 - version
-
-```shell
-hexo v
-# or
-hexo version
-```
-
-## 列出网站的配置 - config
-
-列出网站的配置（`_config.yml`）。
-
-如果指定了 `key`，则只展示配置中对应 `key` 的值；
-
-如果同时指定了 `key` 和 `value`，则将配置中对应的 `key` 的值修改为 `value`。
-
-```shell
-hexo c [key] [value]
-# or
-hexo config [key] [value]
-```
-
----
-
-## Hexo 指令
-
-https://hexo.io/zh-cn/docs/commands
