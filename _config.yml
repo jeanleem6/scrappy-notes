@@ -4,8 +4,9 @@
 
 # Site
 title: Cedric
-subtitle: Cedric HEXO
-description: This is a bloger about FE(front engineer), so here has any articles for CSS/HTML/JS, etc.
+subtitle: 随手笔记
+description: Cedric 的前端技术博客，记录 CSS / HTML / JavaScript 等学习笔记与文章。
+keywords: 前端, CSS, HTML, JavaScript, Hexo
 author: Cedric
 language: zh-CN
 timezone: Asia/Shanghai
@@ -96,6 +97,13 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: even
+
+# RSS Feed
+## Plugin: hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
