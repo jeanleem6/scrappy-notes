@@ -65,9 +65,9 @@ hexo new [layout] <title> # layout 对应 scaffolds/ 下的文件名；标题含
 
 ## 部署
 
-`hexo d` 通过 `hexo-deployer-git` 将 `public/` 推送到 `cedriclee85/cedriclee85.github.io` 的 `master` 分支（见 `_config.yml` 的 `deploy` 配置）。
+push 到 `main` 后由 GitHub Actions（`.github/workflows/deploy.yml`）自动构建，并将 `public/` 推送到 `cedriclee85/cedriclee85.github.io` 的 `master` 分支。推送凭证为本仓库的 Secret `ACTIONS_DEPLOY_KEY`，内容是目标仓库中一把有写权限的 Deploy Key 的私钥。
 
-发布前建议完整跑一遍（逐行执行）：
+也可本地手动部署（`hexo-deployer-git`，见 `_config.yml` 的 `deploy` 配置），逐行执行：
 
 ```shell
 yarn clean # 清缓存
