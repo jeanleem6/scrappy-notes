@@ -116,3 +116,11 @@ deploy:
 # hexo-renderer-marked
 marked:
   postAsset: true # 解析文章资源目录内的图片路径（取代 hexo-asset-image）
+
+# hexo-renderer-dartsass（透传给 sass.compileAsync）
+sass:
+  # 主题 even 已停更，其 SCSS 仍用 @import／全局内建函数／darken()，静默这些 Dart Sass 弃用警告
+  silenceDeprecations:
+    - import
+    - global-builtin
+    - color-functions
