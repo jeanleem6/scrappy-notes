@@ -1,40 +1,25 @@
 ---
-title: about
+title: 关于
 layout: about   # 添加使用 about 模版
 ---
 
-___________________________
-`DOC Store` `Scrappy Notes`
-___________________________
+## 关于我
 
+我是 **Cedric**，一名前端工程师。日常写 CSS / HTML / JavaScript，也喜欢折腾开发环境和各种提升效率的工具。
 
-<!-- resources: -->
-## Tools
+## 关于本站
 
-- ![TinyPNG](https://bityl.co/QJWJ) [TinyPNG](https://tinypng.com/)
-- <img src="https://bityl.co/QJLL" width=24 /> [LOL Colors](https://www.webdesignrankings.com/resources/lolcolors/) -- Curated color palette inspiration
-- ![Color Picker](https://bityl.co/QJQX) [Color Picker](https://htmlcolorcodes.com/color-picker/)
-- ![Fonts.css](https://bityl.co/QJTL) [Fonts.css](https://zenozeng.github.io/fonts.css/)
-- <img src="https://bityl.co/QJLv" width=120 style="background:#e0e3da;" /> [FLATICON](https://www.flaticon.com/)
-- <img src="https://bityl.co/QJMA" width=24 style="background:#9055A2;" /> [Smash](https://fromsmash.com/) -- Send & share (super) big files for everyone
-- ![pixabay](https://bityl.co/QJQ5) [pixabay](https://pixabay.com/)
-- ![Unsplash](https://bityl.co/QJTh) [Unsplash Developers](https://unsplash.com/documentation) -- Images API
-- ![DolphinCloud](https://bityl.co/QJUB) [DolphinCloud](https://hitun.io/)
-- ![q](https://bityl.co/QJUH) [How to Ask Questions The Smart Way](http://doc.zengrong.net/smart-questions/en.html)
+Scrappy Notes（随手笔记）建于 2016 年，基于 [Hexo](https://hexo.io/) + [even](https://github.com/ahonn/hexo-theme-even) 主题，托管在 GitHub Pages。
 
-## Software Download
+这里主要记录：
 
-- [AppNee Freeware Group.](https://appnee.com/) ![Mac](https://bityl.co/QJPy) ![Win](https://bityl.co/QJPn)
-- [macx](https://macx.ws/) ![Mac](https://bityl.co/QJPy)
-- [GET INTO PC](https://getintopc.com/) ![Win](https://bityl.co/QJPn)
-- [大眼仔](http://www.dayanzai.me/?s=sublime) ![Win](https://bityl.co/QJPn)
+- **前端笔记** —— JavaScript / CSS / HTML 的学习与实践
+- **工具与环境** —— Git、终端、编辑器，以及 macOS / Windows 的折腾记录
+- **其它** —— 一切值得随手记下的东西
 
-## Enticing Sites
+写下来是为了理清思路、方便日后查阅。文章多为个人笔记，难免有疏漏，欢迎在文末评论区指正交流。
 
-- [Bartosz Ciechanowski](https://ciechanow.ski/)
-  各种硬核原理讲解☢️(with MASSIVE amounts of SUPER COOL ANIMATIONS🚀⚡)
-  涵盖各种主题：⌚机械手表、🚲自行车、🪽飞机翼型、📷相机镜头、⚙️齿轮，等...
+## 联系我
 
-- ![Hacker News](https://bityl.co/QJUo) [Hacker News](https://news.ycombinator.com/news)
-
-- <img src="https://bityl.co/QJMW" width=24 /> [Front End Interview Handbook](https://www.frontendinterviewhandbook.com/zh/javascript-questions)
+- GitHub：[@cedriclee85](https://github.com/cedriclee85)
+- Email：<cedric85.lee@gmail.com>
