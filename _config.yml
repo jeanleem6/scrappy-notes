@@ -112,3 +112,7 @@ deploy:
   repo: git@github.com:cedriclee85/cedriclee85.github.io.git
   branch: master
   message:
+
+# hexo-renderer-marked
+marked:
+  postAsset: true # 解析文章资源目录内的图片路径（取代 hexo-asset-image）

@@ -4,7 +4,7 @@ Cedric 的 Hexo 博客源码，使用 [hexo-theme-even](https://github.com/ahonn
 
 ## 环境要求
 
-- Node.js 14+（Hexo 7 要求）
+- Node.js 20.19+（Hexo 8 要求）
 - Git
 - yarn
 
@@ -67,7 +67,7 @@ hexo new [layout] <title> # layout 对应 scaffolds/ 下的文件名；标题含
 > **注意：**
 >
 > 1. 图片需要存放到以该 markdown 文件名命名的文件夹中
-> 2. 图片不需要写路径，插件 `hexo-asset-image` 会自动为所有图片补全路径
+> 2. 图片不需要写路径，`hexo-renderer-marked` 的 `postAsset` 选项会自动为文章资源目录内的图片补全路径
 
 ## 部署
 
