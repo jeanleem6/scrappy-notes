@@ -11,7 +11,7 @@ Cedric 的 Hexo 博客源码，使用 [hexo-theme-even](https://github.com/ahonn
 ## 本地安装
 
 ```shell
-npm install hexo-cli -g # 安装 Hexo CLI，官网：https://hexo.io/zh-cn/
+npm install hexo-cli -g # 可选：全局 CLI（用 npm 装）；不装则用 yarn 脚本或 yarn hexo <命令>
 git clone git@github.com:cedriclee85/scrappy-notes.git # clone 本 blog
 cd scrappy-notes # 进入 blog 目录
 yarn # 安装依赖
@@ -31,16 +31,18 @@ git clone https://github.com/ahonn/hexo-theme-even themes/even
 
 ## 常用命令
 
-| 操作 | 命令 | 缩写 | yarn 脚本 |
-| --- | --- | --- | --- |
-| 本地预览（<http://localhost:4000>） | `hexo server` | `hexo s` | `yarn server` |
-| 新建文章 | `hexo new [layout] <title>` | `hexo n` | — |
-| 生成静态文件（输出到 `public/`） | `hexo generate` | `hexo g` | `yarn build` |
-| 部署网站 | `hexo deploy` | `hexo d` | `yarn deploy` |
-| 清除缓存与已生成文件 | `hexo clean` | — | `yarn clean` |
-| 列出网站数据 | `hexo list <type>` | `hexo l` | — |
-| 查看/修改配置 | `hexo config [key] [value]` | — | — |
+| 操作                                | hexo 命令                   | 缩写     | yarn 脚本     |
+| ----------------------------------- | --------------------------- | -------- | ------------- |
+| 本地预览（<http://localhost:4000>） | `hexo server`               | `hexo s` | `yarn server` |
+| 新建文章                            | `hexo new [layout] <title>` | `hexo n` | —             |
+| 生成静态文件（输出到 `public/`）    | `hexo generate`             | `hexo g` | `yarn build`  |
+| 部署网站                            | `hexo deploy`               | `hexo d` | `yarn deploy` |
+| 清除缓存与已生成文件                | `hexo clean`                | —        | `yarn clean`  |
+| 列出网站数据                        | `hexo list <type>`          | `hexo l` | —             |
+| 查看/修改配置                       | `hexo config [key] [value]` | —        | —             |
 
+> 未全局安装 hexo-cli 时，上表 `hexo` 命令可写成 `yarn hexo <命令>`（走项目本地依赖），如 `yarn hexo new xxx`。
+>
 > 完整指令文档：<https://hexo.io/zh-cn/docs/commands>
 
 ## 写作
@@ -71,8 +73,10 @@ hexo new [layout] <title> # layout 对应 scaffolds/ 下的文件名；标题含
 
 `hexo d` 通过 `hexo-deployer-git` 将 `public/` 推送到 `cedriclee85/cedriclee85.github.io` 的 `master` 分支（见 `_config.yml` 的 `deploy` 配置）。
 
-发布前建议完整跑一遍：
+发布前建议完整跑一遍（逐行执行）：
 
 ```shell
-hexo clean && hexo g -d # 清缓存 → 生成 → 部署
+yarn clean # 清缓存
+yarn build # 生成静态文件
+yarn deploy # 部署
 ```
