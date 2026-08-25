@@ -96,47 +96,47 @@ rm ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.6.plist
 
 > *jsweeney:*
 >
-> **(NOTICE: If you see `\@`, it is just `@`, remove the backslash(`\`) when you copy.)**
+> **NOTICE**: If you see `\@`, it is just `@`, remove the backslash(`\`) when you copy.
 > I also had your problem. My issue was that the mysql\@5.6 was trying to boot the mysql 5.7 database (installed in the default `/usr/local/var` folder). If you want to run both in parallel on their own distinct databases, there are a few more steps to do.
 >
 > 1. Create a new (separate) data directory and database for the 5.6 version
     Run `/usr/local/Cellar/mysql\@5.6/5.6.36/bin/mysql_install_db --user=root --datadir=/usr/local/var/mysql56`
 > 2. Change the configuration to start the 5.6 version pointing to this database
 >   Edit `/usr/local/Cellar/mysql\@5.6/5.6.36/homebrew.mxcl.mysql\@5.6.plist` to change both `/usr/local/var/mysql` instances to `/usr/local/var/mysql56` (I didn't put the `@` in the folder name just in case it would cause issues).
-    ``` xml
-    <plist version="1.0">
-    <dict>
-      <key>KeepAlive</key>
-      <true/>
-      <key>Label</key>
-      <string>homebrew.mxcl.mysql@5.6</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>/usr/local/opt/mysql@5.6/bin/mysqld_safe</string>
-        <string>--bind-address=127.0.0.1</string>
-        <string>--datadir=/usr/local/var/mysql56</string> <!-- <<<<<<<<<<<<<<<<<< HERE -->
-      </array>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>WorkingDirectory</key>
-      <string>/usr/local/var/mysql56</string> <!-- <<<<<<<<<<<<<<<<<< AND HERE -->
-    </dict>
-    </plist>
-    ```
+>    ``` xml
+>    <plist version="1.0">
+>    <dict>
+>      <key>KeepAlive</key>
+>      <true/>
+>      <key>Label</key>
+>      <string>homebrew.mxcl.mysql@5.6</string>
+>      <key>ProgramArguments</key>
+>      <array>
+>        <string>/usr/local/opt/mysql@5.6/bin/mysqld_safe</string>
+>        <string>--bind-address=127.0.0.1</string>
+>        <string>--datadir=/usr/local/var/mysql56</string> <!-- <<<<<<<<<<<<<<<<<< HERE -->
+>      </array>
+>      <key>RunAtLoad</key>
+>      <true/>
+>      <key>WorkingDirectory</key>
+>      <string>/usr/local/var/mysql56</string> <!-- <<<<<<<<<<<<<<<<<< AND HERE -->
+>    </dict>
+>    </plist>
+>    ```
 > 3. Change the port of the 5.6 server - if ever you want to start both at the same time.
 > Edit `/usr/local/Cellar/mysql\@5.6/5.6.36/my.cnf`, uncomment `port` and change it to some other value than `3306`.
-    ``` bash
-    # These are commonly set, remove the # and set as required.
-    # basedir = .....
-    # datadir = .....
-    port = 3356
-    # server_id = .....
-    # socket = .....
-    ```
+>    ``` bash
+>    # These are commonly set, remove the # and set as required.
+>    # basedir = .....
+>    # datadir = .....
+>    port = 3356
+>    # server_id = .....
+>    # socket = .....
+>    ```
 > NOTE A little caveat about connecting to the MySQL instances after such a setup. Using any kind of driver will > work out of the box if you set the correct port. However, at the command line, `mysql` ignores the `--port` > value by default, so you need something like this>
-    ``` bash
-    mysql -uroot --port=3356 --protocol=TCP
-    ```
+>    ``` bash
+>    mysql -uroot --port=3356 --protocol=TCP
+>    ```
 > See this article for more details: https://dev.mysql.com/doc/refman/5.7/en/connecting.html
 
 ---

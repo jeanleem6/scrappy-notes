@@ -71,7 +71,7 @@ $ npm install
   post_asset_folder: true
   ```
 
-  > **注意：**不建议用以下命令安装该插件，用这个 NPM 包图片路径会有问题
+  > **注意**：不建议用以下命令安装该插件，用这个 NPM 包图片路径会有问题
   >
   > ```bash
   > yarn add hexo-asset-image

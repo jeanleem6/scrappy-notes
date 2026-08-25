@@ -365,19 +365,19 @@ brew install php70
 `* 2019.03.01 updated *`
 
 - Uninstall your existing Homebrew PHP version if it is the latest release from php.net
-``` bash
-brew uninstall --force php56
-```
+  ``` bash
+  brew uninstall --force php56
+  ```
 
 - Update your formulas:
-``` bash
-brew update
-```
+  ``` bash
+  brew update
+  ```
 
 - Fix any tap link errors:
-``` bash
-brew tap --repair
-```
+  ``` bash
+  brew tap --repair
+  ```
 
 ---
 

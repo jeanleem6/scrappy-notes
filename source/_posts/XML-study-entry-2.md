@@ -189,5 +189,5 @@ function displayCD() {
 .cd_list .year{width:21%;background-color:#f0f1ff;text-align:center}
 ```
 
-** Result:**
+**Result:**
 ![XML DATA](1767C1AB-4580-46BF-B912-9FA31A30B592.png)
