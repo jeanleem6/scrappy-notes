@@ -67,6 +67,18 @@ hexo new [layout] <title> # layout 对应 scaffolds/ 下的文件名；标题含
 
 push 到 `main` 后由 GitHub Actions（`.github/workflows/deploy.yml`）自动构建，并将 `public/` 推送到 `cedriclee85/cedriclee85.github.io` 的 `master` 分支。推送凭证为本仓库的 Secret `ACTIONS_DEPLOY_KEY`，内容是目标仓库中一把有写权限的 Deploy Key 的私钥。
 
+### 配置 Deploy Key（首次部署或更换密钥时）
+
+1. 本机生成密钥对（PowerShell，`-N '""'` 表示空口令，CI 用的密钥不能带口令）：
+
+   ```powershell
+   ssh-keygen -t ed25519 -C "scrappy-notes deploy" -f "$env:USERPROFILE\.ssh\scrappy_deploy" -N '""'
+   ```
+
+2. 公钥 → 目标仓库：`cedriclee85/cedriclee85.github.io` → Settings → Deploy keys → Add deploy key，粘贴 `scrappy_deploy.pub` 全文，**勾选 Allow write access**。
+3. 私钥 → 本仓库 Secret：`cedriclee85/scrappy-notes` → Settings → Secrets and variables → Actions → New repository secret，Name 填 `ACTIONS_DEPLOY_KEY`，Secret 粘贴 `scrappy_deploy` 私钥全文（含 `-----BEGIN/END OPENSSH PRIVATE KEY-----` 两行）。
+4. 私钥存入 GitHub 后即可删除本机副本；私钥不得写入任何仓库文件。
+
 也可本地手动部署（`hexo-deployer-git`，见 `_config.yml` 的 `deploy` 配置），逐行执行：
 
 ```shell
