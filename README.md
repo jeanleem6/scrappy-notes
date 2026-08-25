@@ -17,15 +17,9 @@ cd scrappy-notes # 进入 blog 目录
 yarn # 安装依赖
 ```
 
-## 安装主题 even
+## 主题 even
 
-主题本体不入库，需要单独 clone；本站的主题定制文件（`_config.yml`、favicon）备份在 `themes/_bak_for_theme_even/`，clone 后覆盖过去即可：
-
-```shell
-git clone https://github.com/ahonn/hexo-theme-even themes/even
-```
-
-然后将 `themes/_bak_for_theme_even/` 下的文件拷贝到 `themes/even/` 对应位置**替换**。
+主题 [hexo-theme-even](https://github.com/ahonn/hexo-theme-even) 已整体入库在 `themes/even/`（基于上游 `991ce19`，含本站定制：`_config.yml`、`source/favicon.ico`、`layout/_partial/footer.ejs`、`source/css/_partial/_post/_content.scss`），clone 本仓库后无需另行安装。
 
 > 主题所需的渲染器 `hexo-renderer-dartsass`、`hexo-renderer-ejs` 已在 `package.json` 中声明，`yarn` 安装时会一并装好。
 
