@@ -1,4 +1,4 @@
-<% if (!is_home() && !is_archive()) { %>  
+<% if (page.comments && !is_home()) { %>  
   <%- partial("_comments/disqus.ejs") %>  
   <%- partial("_comments/changyan.ejs") %>  
   <%- partial("_comments/livere.ejs") %>  
